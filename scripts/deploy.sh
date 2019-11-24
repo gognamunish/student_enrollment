@@ -1,3 +1,12 @@
+# Check Docker is installed
+if [ -x "$(command -v docker)" ]; then
+    echo "Cool Docker is installed, let's go ahead ...."
+    # command
+else
+    echo "Install docker before proceeding"
+    exit 0
+fi
+
 echo "Getting latest code from Github into folder: $PWD"
 
 # Get Code
