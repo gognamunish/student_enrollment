@@ -24,6 +24,7 @@ Student Enrollment project is a basic Spring boot application that follows micro
 - Helm chart / Kubernetes Setup
 - AWS Deployment / Setup
 - MySQL spring profile
+- Application has potential for all good "Spring Cloud" stuff like Config Server, ZooKeeper Discovery, Zuul, Ribbon, Hystrix etc.
 
 ## Running Application as Docker Image on Local Machine
 ```shell script
