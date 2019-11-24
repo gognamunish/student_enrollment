@@ -12,10 +12,7 @@ import org.springframework.http.MediaType;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 @Slf4j
 @RestController
@@ -29,12 +26,12 @@ public class EnrollmentController {
 
     @GetMapping("fetchStudents")
     public StudentDTOList fetchStudents(@RequestParam Map<String, String> allParams) {
-        log.info("Fetch Student Id: {}", allParams);
+        log.info("Fetch Students Params: {}", allParams);
 
-        if (!allParams.isEmpty()) {
+        if (allParams.size() == 1) {
 
             String param = allParams.keySet().iterator().next();
-            String value = allParams.values().iterator().next();
+            String value = allParams.get(param);
             if (StringUtils.isEmpty(param) || StringUtils.isEmpty(value) || !SUPPORTED_PARAMS.contains(param)) {
                 throw new InvalidEnrollmentRequest("API currently supports only one of following parameters with a valid value: " + SUPPORTED_PARAMS);
             }
@@ -52,7 +49,7 @@ public class EnrollmentController {
             }
         }
 
-        return StudentDTOList.builder().build();
+        return StudentDTOList.builder().students(new ArrayList<>()).build();
     }
 
     @PostMapping("student")
@@ -85,11 +82,11 @@ public class EnrollmentController {
             throw new InvalidEnrollmentRequest("Student Id value should be provided");
         }
 
-        return enrollmentService.delete(studentDTO.getId());
+        return enrollmentService.deleteStudentById(studentDTO.getId());
     }
 
     private StudentDTO saveOrUpdate(StudentDTO studentDTO) {
-        return enrollmentService.saveOrUpdate(studentDTO);
+        return enrollmentService.saveOrUpdateStudent(studentDTO);
     }
 
     private boolean isInteger(String idValue) {

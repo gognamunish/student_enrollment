@@ -21,6 +21,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -117,6 +118,17 @@
     <orderEntry type="library" name="Maven: org.mapstruct:mapstruct:1.2.0.Final" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger-ui:2.8.0" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-bean-validators:2.8.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.cucumber:cucumber-java:4.2.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.cucumber:cucumber-core:4.2.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.cucumber:cucumber-html:0.2.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.cucumber:gherkin:5.1.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.cucumber:tag-expressions:1.1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.cucumber:cucumber-expressions:6.2.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.cucumber:datatable:1.1.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.cucumber:datatable-dependencies:1.1.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.cucumber:cucumber-junit:4.2.0" level="project" />
+    <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.cucumber:cucumber-spring:4.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.10" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-test:2.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-test:2.1.1.RELEASE" level="project" />
@@ -125,7 +137,6 @@
     <orderEntry type="library" name="Maven: net.minidev:json-smart:2.3" level="project" />
     <orderEntry type="library" name="Maven: net.minidev:accessors-smart:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.ow2.asm:asm:5.0.4" level="project" />
-    <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
     <orderEntry type="library" name="Maven: org.assertj:assertj-core:3.11.1" level="project" />
     <orderEntry type="library" name="Maven: org.mockito:mockito-core:2.23.4" level="project" />
     <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy:1.9.5" level="project" />

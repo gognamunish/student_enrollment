@@ -41,7 +41,7 @@ public class EnrollmentService {
     }
 
 
-    public APIResponse delete(Integer id) {
+    public APIResponse deleteStudentById(Integer id) {
         APIResponse apiResponse = APIResponse.builder().build();
         try {
             studentRepository.deleteById(id);
@@ -54,7 +54,7 @@ public class EnrollmentService {
         return apiResponse;
     }
 
-    public StudentDTO saveOrUpdate(StudentDTO studentDTO) {
+    public StudentDTO saveOrUpdateStudent(StudentDTO studentDTO) {
         Student student = studentRepository.save(DTO_TO_ENTITY.apply(studentDTO));
         return ENTITY_TO_DTO.apply(student);
     }
