@@ -52,7 +52,7 @@ public class EnrollmentController {
             }
         }
 
-        return null;
+        return StudentDTOList.builder().build();
     }
 
     @PostMapping("student")
