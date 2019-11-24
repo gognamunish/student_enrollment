@@ -18,7 +18,7 @@ public class EnrollmentServiceErrorAdvice {
     }
 
     @ExceptionHandler({HttpMessageNotReadableException.class})
-    public ResponseEntity<APIResponse> handleInvalidFormatException(HttpMessageNotReadableException e) {
+    public ResponseEntity<APIResponse> handleHttpMessageNotReadableException(HttpMessageNotReadableException e) {
         return error(HttpStatus.BAD_REQUEST, e);
     }
 
@@ -29,12 +29,12 @@ public class EnrollmentServiceErrorAdvice {
 
     @ExceptionHandler({NumberFormatException.class})
     public ResponseEntity<APIResponse> handleNumberFormatException(NumberFormatException e) {
-        return error(HttpStatus.NOT_FOUND, e);
+        return error(HttpStatus.BAD_REQUEST, e);
     }
 
 
     @ExceptionHandler({EntityNotFoundException.class})
-    public ResponseEntity<APIResponse> handleEmptyResultDataAccessException(EntityNotFoundException e) {
+    public ResponseEntity<APIResponse> handleEntityNotFoundException(EntityNotFoundException e) {
         return error(HttpStatus.NOT_FOUND, e);
     }
 

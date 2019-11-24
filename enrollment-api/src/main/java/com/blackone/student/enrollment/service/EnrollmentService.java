@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+// TODO API can be improved by having Java-8 style Optional returns.
 public class EnrollmentService {
 
     private final StudentRepository studentRepository;

@@ -6,21 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="enrollment-api" />
+        <module name="enrollment-api (2)" />
         <module name="enrollment-dao" />
         <module name="enrollment-dao (2)" />
-        <module name="enrollment-api (2)" />
-        <module name="enrollment-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="enrollment-api" target="1.8" />
       <module name="enrollment-api (2)" target="1.8" />
-      <module name="enrollment-dao" target="1.8" />
       <module name="enrollment-dao (2)" target="1.8" />
       <module name="student-enrollment" target="1.5" />
       <module name="student-enrollment (1)" target="1.5" />
       <module name="student-enrollment (2)" target="1.5" />
-      <module name="student_enrollment" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
