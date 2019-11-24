@@ -11,12 +11,14 @@ Student Enrollment project is a basic Spring boot application that follows micro
 - Java 8
 - Docker
 
-### Design Features
+### Design Features/Considerations
 - Travis CI configured for builds, every commit starts a new build. 
 - Maven multi module project and separates REST from DAO layer (can be easily separated into individual repos).
 - Since there is only one Micro service at the moment so no Gateway endpoint added for sake of performance (YAGNI) 
 - Spring Data JPA ready (default is H2)
 - Cucumber BDD coverage across all business cases.
+- Database design for the moment defines just one Entity, later we might want to normalize enrollment into - Student, Class & Enrollment entities.
+- No Cache is used at the moment so in Future some distributed and highly fault tolerant Cache like Hazelcast can be used
 
 ### TODO
 - Helm chart / Kubernetes Setup
