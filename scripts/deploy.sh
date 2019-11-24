@@ -9,8 +9,8 @@ ls -lart
 ./mvnw clean package -DskipTests
 
 # Create Docker Image
-docker build -t blackone/student_enrollment .
+docker build -t taoyogi/student_enrollment .
 
 # Run Docker image
-docker run -p 8080:8080 -t blackone/student_enrollment
+docker run -p 8080:8080 -t taoyoi/student_enrollment
 
