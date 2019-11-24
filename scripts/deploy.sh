@@ -1,10 +1,14 @@
+echo "Getting latest code from Github into folder: $PWD"
 
-# Get latest code from master branch and build in current directory
-git clone https://github.com/gognamunish/student_enrollment.git .
+# Get Code
+git clone https://github.com/gognamunish/student_enrollment.git
+cd student_enrollment/enrollment-api
+ls -lart
+
+# Build Code
 ./mvnw clean package -DskipTests
 
 # Create Docker Image
-cd enrollment-api
 docker build -t blackone/student_enrollment .
 
 # Run Docker image
