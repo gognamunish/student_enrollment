@@ -27,7 +27,14 @@ Student Enrollment project is a basic Spring boot application that follows micro
 
 ## Running Application as Docker Image on Local Machine
 ```shell script
-curl -o deploy.sh https://raw.githubusercontent.com/gognamunish/student_enrollment/master/scripts/deploy.sh
+curl -o deploy.sh 'https://raw.githubusercontent.com/gognamunish/student_enrollment/master/scripts/deploy.sh'
 chmod +x deploy.sh
 ./deploy.sh
 ```
+
+
+## Swagger API Documentation
+
+http://localhost:8080/swagger-ui.html
+
+
