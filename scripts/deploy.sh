@@ -18,11 +18,8 @@ cd student_enrollment
 
 # Create Docker Image
 cd enrollment-api
-docker build -t taoyogi/student_enrollment .
-
-# Push to Registry
-# docker push taoyogi/student_enrollment:latest
+docker build -t blackone/student_enrollment .
 
 # Run Docker image
-docker run -p 8080:8080 -t taoyoi/student_enrollment
+docker run -p 8080:8080 -t blackone/student_enrollment
 
