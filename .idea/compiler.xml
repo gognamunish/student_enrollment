@@ -7,9 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="enrollment-api" />
+        <module name="enrollment-dao (2)" />
         <module name="enrollment-api (2)" />
         <module name="enrollment-dao" />
-        <module name="enrollment-dao (2)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

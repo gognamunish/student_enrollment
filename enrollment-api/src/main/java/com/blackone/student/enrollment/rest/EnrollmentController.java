@@ -3,6 +3,7 @@ package com.blackone.student.enrollment.rest;
 
 import com.blackone.student.enrollment.dto.StudentDTO;
 import com.blackone.student.enrollment.dto.StudentDTOList;
+import com.blackone.student.enrollment.dto.StudentDeleteRequest;
 import com.blackone.student.enrollment.exception.APIResponse;
 import com.blackone.student.enrollment.exception.InvalidEnrollmentRequest;
 import com.blackone.student.enrollment.service.EnrollmentService;
@@ -83,6 +84,19 @@ public class EnrollmentController {
         }
 
         return enrollmentService.deleteStudentById(studentDTO.getId());
+    }
+
+    @DeleteMapping("students")
+    public APIResponse deleteStudentByMultipeIds(@RequestBody StudentDeleteRequest request) {
+        log.info("Delete Request: {}", request);
+
+
+        request.getIds().stream().forEach(id -> {
+            enrollmentService.deleteStudentById(id);
+        });
+
+
+        return APIResponse.builder().result(APIResponse.Result.SUCCESS).build();
     }
 
     private StudentDTO saveOrUpdate(StudentDTO studentDTO) {
