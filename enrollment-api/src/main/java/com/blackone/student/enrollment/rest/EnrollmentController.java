@@ -29,6 +29,11 @@ public class EnrollmentController {
     public StudentDTOList fetchStudents(@RequestParam Map<String, String> allParams) {
         log.info("Fetch Students Params: {}", allParams);
 
+        if (allParams.isEmpty()) {
+            // case when no parameter is provided
+            return enrollmentService.fetchAll();
+        }
+
         if (allParams.size() == 1) {
 
             String param = allParams.keySet().iterator().next();

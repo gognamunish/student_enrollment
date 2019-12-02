@@ -73,4 +73,12 @@ public class EnrollmentService {
                         .map(ENTITY_TO_DTO)
                         .collect(Collectors.toList()));
     }
+
+    public StudentDTOList fetchAll() {
+        return new StudentDTOList(
+                studentRepository.findAll()
+                        .stream()
+                        .map(ENTITY_TO_DTO)
+                        .collect(Collectors.toList()));
+    }
 }
